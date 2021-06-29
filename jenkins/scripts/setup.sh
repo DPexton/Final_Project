@@ -12,7 +12,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login --identity
 
 #Credentials
-az aks get-credentials --resource-group| --name k8s-test-cluster
+az aks get-credentials --resource-group k8s-test --name k8s-test-cluster
 
 #Install Terraform
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
