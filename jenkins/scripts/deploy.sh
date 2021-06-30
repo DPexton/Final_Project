@@ -1,4 +1,4 @@
-cd terraform-files
+cd terraform-files/k8smodels
 
 terraform init
 terraform apply
