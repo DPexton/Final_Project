@@ -5,7 +5,7 @@ terraform apply -auto-approve
 
 cd
 
-kubectl apply -f .
+kubectl apply -f 
 kubectl get pods
 kubectl get services
 
