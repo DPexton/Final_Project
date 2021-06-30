@@ -5,7 +5,8 @@ terraform apply -auto-approve
 
 cd -
 
-kubectl wait apply -f ./k8s_files 
+kubectl  apply -f ./k8s_files 
+sleep 40
 kubectl get pods
 kubectl get services
 
