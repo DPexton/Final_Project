@@ -9,8 +9,9 @@ pipeline {
         stage('Test'){
             steps{
                 sh "bash jenkins/scripts/test.sh"
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') 
-                    
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    sh "exit 1"
+                }    
             }
         }
         stage('Deploy') {
