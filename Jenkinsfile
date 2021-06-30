@@ -6,14 +6,7 @@ pipeline {
                 sh "bash jenkins/scripts/setup.sh"
             }
         }
-        stage('Test'){
-            steps{
-                sh "bash jenkins/scripts/test.sh"
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    sh "exit 1"
-                }    
-            }
-        }
+      
         stage('Deploy') {
             steps {
                 sh "bash jenkins/scripts/deploy.sh"
