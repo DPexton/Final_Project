@@ -16,10 +16,6 @@ provider "azurerm" {
   tenant_id = "de28047b-0625-4fad-adc8-487a110ddb70"
 }
 
-provider "azurerm" {
-    features {}
-}
-
 resource "azurerm_resource_group" "main" {
     name     = "${var.project_name}-rg"
     location = var.location
